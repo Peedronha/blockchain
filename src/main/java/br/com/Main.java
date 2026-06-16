@@ -9,11 +9,10 @@ import java.util.ArrayList;
 
 public class Main {
 
-    static ChainValidation chainValidation = new ChainValidation();
-    public static ArrayList<Block> blockchain = new ArrayList<Block>();
+    public static ArrayList<Block> blockchain = new ArrayList<>();
     public static int difficulty = 4;
 
-    static void main(String[] args) {
+    static void main() {
 
         blockchain.add(new Block("Hi im the first block", "0"));
         blockchain.getLast().mineBlock(difficulty);
@@ -24,7 +23,7 @@ public class Main {
         blockchain.add(new Block("Hey im the third block", blockchain.getLast().hash));
         blockchain.getLast().mineBlock(difficulty);
 
-        chainValidation.isChainValid(blockchain);
+        ChainValidation.isChainValid(blockchain);
 
         String blockchainJson = new GsonBuilder()
                                     .setPrettyPrinting()

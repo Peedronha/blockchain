@@ -4,6 +4,8 @@ import br.com.stringUtil.StringUtil;
 
 import java.util.Date;
 
+import static java.lang.IO.*;
+
 public class Block {
 
     public String hash;
@@ -29,6 +31,6 @@ public class Block {
             nonce++;
             hash = calculateHash();
         }
-        IO.println("Block Mined: " + hash);
+        println("Block Mined: " + hash);
     }
 }

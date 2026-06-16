@@ -4,9 +4,11 @@ import br.com.block.Block;
 
 import java.util.ArrayList;
 
+import static java.lang.IO.*;
+
 public class ChainValidation {
 
-    public ChainValidation() {
+    protected ChainValidation() {
         /* This utility class should not be instantiated */
     }
 
@@ -19,15 +21,15 @@ public class ChainValidation {
             previousBlock = blockchain.get(i-1);
 
             if(!currentBlock.hash.equals(currentBlock.calculateHash()) ){
-                IO.println("Current Hashes not equal");
+                println("Current Hashes not equal");
                 return;
             }
 
             if(!previousBlock.hash.equals(currentBlock.previousHash) ) {
-                IO.println("Previous Hashes not equal");
+                println("Previous Hashes not equal");
                 return;
             }
         }
-        IO.println("\nBlockchain is valid!\n");
+        println("\nBlockchain is valid!\n");
     }
 }
