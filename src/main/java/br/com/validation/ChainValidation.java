@@ -28,5 +28,6 @@ public class ChainValidation {
                 return;
             }
         }
+        IO.println("\nBlockchain is valid!\n");
     }
 }

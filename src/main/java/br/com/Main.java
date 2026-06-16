@@ -11,7 +11,7 @@ public class Main {
 
     static ChainValidation chainValidation = new ChainValidation();
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
-    public static int difficulty = 7;
+    public static int difficulty = 4;
 
     static void main(String[] args) {
 
